@@ -1,7 +1,7 @@
 import "./App.css";
 import { Header } from "./component/Header";
-// import { BillingAddress } from "./component/BillingAddress";
-import { LeftBlock } from "./component/LeftBlock";
+import { LeftBlock } from "./component/leftBlock/LeftBlock";
+import { RightBlock } from "./component/rightBlock/RightBlock";
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
         <Header />
         <div className="contentWrapper">
           <LeftBlock />
+          <RightBlock />
         </div>
       </div>
     </div>

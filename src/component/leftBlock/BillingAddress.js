@@ -1,16 +1,25 @@
 import { MenuItem, TextField } from "@mui/material";
-// import { makeStyles } from '@material-ui/core/styles'
+// import clsx from 'clsx';
 import React from "react";
-import "../style/LeftBlock.css";
-// const useStyles = makeStyles({
-//   bigTextFields: {
-//     width: "256px",
-//     height: "44px",
-//     marginTop: "30px",
-//   },
-// });
+import "../../style/LeftBlock.css";
 export const BillingAddress = () => {
-  //   const classes = useStyles();
+  // style object for mui component of textfield
+  const TextFieldsStyle = {
+    bigTextFields: {
+      width: "526px",
+      height: "44px",
+      marginTop: "30px"
+    },
+    smallTextFields: {
+      width: "255px",
+      height: "44px",
+      marginTop: "30px"
+    },
+    marginRight:{
+      marginRight:"16px"
+    }
+  };
+  //array for select box to display
   const currencies = [
     {
       value: "New York",
@@ -19,9 +28,10 @@ export const BillingAddress = () => {
   ];
 
   return (
-    <div className="card shadow left-card-block" style={{ height: "567px" }}>
+    <div className="card shadow-card left-card-block">
       <p className="left-card-block__heading">Billing Address</p>
       <div className="left-formWrapper" style={{ marginTop: "20px" }}>
+        {/* textfields of form */}
         <TextField
           id="outlined-controlled"
           label="First Name"
@@ -38,25 +48,25 @@ export const BillingAddress = () => {
           id="outlined-uncontrolled"
           label="Email"
           value="useranme@gmail.com"
-          // className={classes.bigTextFields}
-          sx={{ width: "526px", height: "44px", marginTop: "30px" }}
+          sx={TextFieldsStyle.bigTextFields}
         />
         <TextField
           id="outlined-uncontrolled"
           label="Street Address"
           value=" "
-          sx={{ width: "526px", height: "44px", marginTop: "30px" }}
+          sx={TextFieldsStyle.bigTextFields}
         />
         <TextField
           id="outlined-uncontrolled"
           value=" "
-          sx={{ width: "526px", height: "44px", marginTop: "20px" }}
+          sx={TextFieldsStyle.bigTextFields}
         />
-        {/* state province */}
+        {/*-------------state province----------------- */}
         <TextField
           id="outlined-select-currency"
           select
           label="Select"
+          value="California"
           sx={{
             height: "44px",
             width: "255px",
@@ -75,7 +85,7 @@ export const BillingAddress = () => {
           id="outlined-uncontrolled"
           label="City"
           value=" "
-          sx={{ width: "255px", height: "44px", marginTop: "30px" }}
+          sx={TextFieldsStyle.smallTextFields}
         />
         <TextField
           id="outlined-uncontrolled"
@@ -92,7 +102,7 @@ export const BillingAddress = () => {
           id="outlined-uncontrolled"
           label="Phone"
           value="+ 123 456 789 111 "
-          sx={{ width: "255px", height: "44px", marginTop: "30px" }}
+          sx={TextFieldsStyle.smallTextFields}
         />
         {/* Check Radios */}
         <div

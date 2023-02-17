@@ -1,28 +1,22 @@
 import React from "react";
-import PayPal from "../assets/PayPal.png";
-import cards from "../assets/cards.png";
+import PayPal from "../../assets/PayPal.png";
+import cards from "../../assets/cards.png";
 import { TextField } from "@mui/material";
-import lock from "../assets/Frame 1507.png";
+import lock from "../../assets/Frame 1507.png";
 
 export const PaymentMethod = () => {
   return (
-    <div className="card shadow left-card-block" style={{ height: "454px",marginBottom:"15px" }}>
+    <div
+      className="card shadow-card left-card-block"
+      style={{marginBottom: "15px"}}
+    >
       <p className="left-card-block__heading">Payment Method</p>
-      {/* ------- */}
+      {/*----------------------------------------------------*/}
       <div
         className="tracking-div"
         style={{ border: "1px solid #B2BCCA", margin: "15px 0px 15px 0px" }}
       >
-        <input
-          type="radio"
-          style={{
-            marginRight: "8px",
-            marginLeft: "19px",
-            marginTop: "18px",
-            height: "14px",
-            width: "14px",
-          }}
-        />
+        <input type="radio" className="input-radio" />
         <span
           className="fw-bold"
           style={{ fontSize: "16px", marginTop: "15px" }}
@@ -41,28 +35,13 @@ export const PaymentMethod = () => {
           style={{
             height: "30px",
             width: "42.5px",
-            marginRight: "16px",
-            marginTop: "8px",
+            margin: "8px 16px 0px 0px",
           }}
         />
       </div>
-      {/* ----------------------- */}
-      <div
-        className="pay-with-credit-div"
-        // style={{
-        //   background: "#e8f0fb",
-        //   border: "1px solid #1660CF",
-        //   margin: "15px 0px 30px 0px",
-        // }}
-      >
-        <input
-          type="radio"
-          style={{
-            margin: "18px 8px 0px 19px",
-            height: "14px",
-            width: "14px",
-          }}
-        />
+      {/*----------------------------------------------------------*/}
+      <div className="pay-with-credit-div">
+        <input className="input-radio" type="radio" />
         <span
           className="fw-bold"
           style={{ fontSize: "16px", marginTop: "15px" }}
@@ -70,15 +49,7 @@ export const PaymentMethod = () => {
           Pay With Credit Card
         </span>
         <span className="float-end">
-          <img
-            src={cards}
-            alt="..."
-            style={{
-              marginLeft: "131px",
-              marginRight: "16px",
-              marginTop: "8px",
-            }}
-          />
+          <img src={cards} alt="..." style={{ margin: "8px 16px 0px 131px" }} />
         </span>
         <div style={{ margin: "35px 19px 0px 23px" }}>
           <TextField
@@ -100,8 +71,7 @@ export const PaymentMethod = () => {
             sx={{
               width: "255px",
               height: "44px",
-              marginTop: "30px",
-              marginRight: "16px",
+              margin: "30px 16px 0px 0px",
             }}
           />
           <div style={{ marginTop: "42px", display: "inline-flex" }}>
@@ -111,10 +81,13 @@ export const PaymentMethod = () => {
           </div>
         </div>
       </div>
-      <div style={{marginTop:"20px"}}>
-            <img src={lock} alt="..." style={{marginRight:"10px"}}></img>
-            <span className="text-muted" style={{fontSize:"12px"}}>We protect your payment information using encryption to provide bank-level security.</span>
-          </div>
+      <div style={{ margin: "20px 0px 20px 0px" }}>
+        <img src={lock} alt="..." style={{ marginRight: "10px" }}></img>
+        <span className="text-muted" style={{ fontSize: "12px" }}>
+          We protect your payment information using encryption to provide
+          bank-level security.
+        </span>
+      </div>
     </div>
   );
 };
