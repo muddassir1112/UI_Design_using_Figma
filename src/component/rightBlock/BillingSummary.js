@@ -7,7 +7,7 @@ import "../../style/RightBlock.css";
 export const BillingSummary = () => {
   return (
     <div
-      className="card shadow-card"
+      className="card shadow-card billing-summary-card"
       style={{ height: "auto", marginTop: "20px" }}
     >
       <span

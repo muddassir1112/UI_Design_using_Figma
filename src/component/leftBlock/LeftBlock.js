@@ -5,7 +5,7 @@ import { ShippingMethod } from './ShippingMethod'
 
 export const LeftBlock = () => {
   return (
-    <section>
+    <section className='left-block'>
         <BillingAddress/>
         <ShippingMethod/>
         <PaymentMethod/>

@@ -23,7 +23,32 @@
 @media screen and (max-width: 980px) {
   .contentWrapper {
     display: block;
+    width: 570px;
+    margin: auto;
+  }
+  .shadow-card {
+    width: 570px;
+  }
+  .billing-summary-card {
+    margin: auto;
+    width: 370px;
+  }
+  .header {
+    width: 570px;
+    margin: auto;
+    gap: 200px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .contentWrapper {
+    display: block;
+    width: 570px;
     margin-left: 15%;
+  }
+  .header {
+    width: 570px;
+    margin-left: 16%;
+    gap: 170px;
   }
 }
 .header > div > a {
