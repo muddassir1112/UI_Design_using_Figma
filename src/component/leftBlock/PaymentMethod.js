@@ -8,7 +8,7 @@ export const PaymentMethod = () => {
   return (
     <div
       className="card shadow-card left-card-block"
-      style={{marginBottom: "15px"}}
+      style={{ marginBottom: "15px" }}
     >
       <p className="left-card-block__heading">Payment Method</p>
       {/*----------------------------------------------------*/}
@@ -56,7 +56,8 @@ export const PaymentMethod = () => {
             id="outlined-controlled"
             label="Card Number"
             value="1234 5678 9101 3556"
-            sx={{ width: "255px", height: "44px", marginRight: "16px" }}
+            className="smallTextFields"
+            sx={{ marginRight: "16px" }}
           />
           <TextField
             id="outlined-uncontrolled"
@@ -68,9 +69,8 @@ export const PaymentMethod = () => {
             id="outlined-uncontrolled"
             label="Card Security Code"
             value="***"
+            className="smallTextFields"
             sx={{
-              width: "255px",
-              height: "44px",
               margin: "30px 16px 0px 0px",
             }}
           />

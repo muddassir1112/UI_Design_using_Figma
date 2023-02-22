@@ -8,7 +8,7 @@ export const Header = () => {
         <div>
           <img src={logo} alt="logo" className="logoImage" />
         </div>
-        <div style={{ marginLeft: "55px"}}>
+        <div style={{ marginLeft: "55px" }}>
           <span className="text-muted" style={{ fontSize: "14px" }}>
             Already have an account?
           </span>{" "}

@@ -3,22 +3,6 @@ import { MenuItem, TextField } from "@mui/material";
 import React from "react";
 import "../../style/LeftBlock.css";
 export const BillingAddress = () => {
-  // style object for mui component of textfield
-  const TextFieldsStyle = {
-    bigTextFields: {
-      width: "526px",
-      height: "44px",
-      marginTop: "30px"
-    },
-    smallTextFields: {
-      width: "255px",
-      height: "44px",
-      marginTop: "30px"
-    },
-    marginRight:{
-      marginRight:"16px"
-    }
-  };
   //array for select box to display
   const currencies = [
     {
@@ -36,30 +20,34 @@ export const BillingAddress = () => {
           id="outlined-controlled"
           label="First Name"
           value="Alex"
-          sx={{ width: "255px", height: "44px", marginRight: "16px" }}
+          className="smallTextFields"
+          sx={{ marginRight: "16px" }}
         />
         <TextField
           id="outlined-uncontrolled"
           label="Last Name"
           value="Driver"
-          sx={{ width: "255px", height: "44px" }}
+          className="smallTextFields"
         />
         <TextField
           id="outlined-uncontrolled"
           label="Email"
           value="useranme@gmail.com"
-          sx={TextFieldsStyle.bigTextFields}
+          className="bigTextFields"
+          sx={{ marginTop: "30px" }}
         />
         <TextField
           id="outlined-uncontrolled"
           label="Street Address"
           value=" "
-          sx={TextFieldsStyle.bigTextFields}
+          className="bigTextFields"
+          sx={{ marginTop: "30px" }}
         />
         <TextField
           id="outlined-uncontrolled"
           value=" "
-          sx={TextFieldsStyle.bigTextFields}
+          className="bigTextFields"
+          sx={{ marginTop: "30px" }}
         />
         {/*-------------state province----------------- */}
         <TextField
@@ -67,9 +55,8 @@ export const BillingAddress = () => {
           select
           label="Select"
           value="California"
+          className="smallTextFields"
           sx={{
-            height: "44px",
-            width: "255px",
             marginTop: "30px",
             marginRight: "16px",
           }}
@@ -85,15 +72,15 @@ export const BillingAddress = () => {
           id="outlined-uncontrolled"
           label="City"
           value=" "
-          sx={TextFieldsStyle.smallTextFields}
+          className="smallTextFields"
+          sx={{ marginTop: "30px" }}
         />
         <TextField
           id="outlined-uncontrolled"
           label="Zip/Postal code"
           value="22434"
+          className="smallTextFields"
           sx={{
-            width: "255px",
-            height: "44px",
             marginTop: "30px",
             marginRight: "16px",
           }}
@@ -102,7 +89,8 @@ export const BillingAddress = () => {
           id="outlined-uncontrolled"
           label="Phone"
           value="+ 123 456 789 111 "
-          sx={TextFieldsStyle.smallTextFields}
+          className="smallTextFields"
+          sx={{ marginTop: "30px" }}
         />
         {/* Check Radios */}
         <div

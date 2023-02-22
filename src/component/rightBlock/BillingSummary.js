@@ -66,14 +66,14 @@ export const BillingSummary = () => {
           />
           Please check to acknowledge our{" "}
           <a href="#0" style={{ textDecoration: "none" }}>
-            Privacy and <span style={{marginLeft:"25px"}}>TermsPolicy</span>
+            Privacy and <span style={{ marginLeft: "25px" }}>TermsPolicy</span>
           </a>
         </span>
         <button className="pay-btn">Pay $3439.00</button>
         <div
           style={{
             textAlign: "center",
-            margin: "18.77px 0px 18.77px 0px"
+            margin: "18.77px 0px 18.77px 0px",
           }}
         >
           <img src={norton} alt="..."></img>
